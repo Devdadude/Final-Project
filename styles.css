@@ -1,0 +1,172 @@
+:root {
+  --black: #111;
+  --red: #e63946;
+  --white: #f1f1f1;
+  --gray: #444;
+  --light-gray: #ccc;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+/* === COOKIE CLICKER === */
+#cookieClickerPro {
+  background-color: var(--black);
+  color: var(--red);
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 350px;
+}
+
+#cookieClickerPro .rank {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#cookieClickerPro .cookie {
+  width: 150px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  margin: 10px 0;
+}
+
+#cookieClickerPro .button {
+  background-color: var(--red);
+  border: none;
+  color: var(--black);
+  padding: 10px 20px;
+  margin: 10px 5px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#cookieClickerPro .button:hover {
+  background-color: darkred;
+  color: var(--white);
+}
+
+/* === HANGMAN === */
+#hangman-game {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  max-width: 600px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+#hangman-game h1 {
+  color: var(--red);
+  margin-bottom: 20px;
+}
+
+#options-container {
+  margin: 20px auto;
+}
+
+.options {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #222;
+  border: 2px solid var(--red);
+  color: var(--red);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.options:hover,
+.options.active {
+  background-color: var(--red);
+  color: black;
+}
+
+#user-input-section {
+  margin: 20px auto;
+  font-size: 2rem;
+  letter-spacing: 10px;
+  color: var(--red);
+}
+
+.dashes {
+  margin: 0 5px;
+  border-bottom: 2px solid var(--red);
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+#canvas {
+  margin-top: 30px;
+  background-color: #111;
+  border: 2px solid var(--red);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#new-game-container {
+  margin-top: 30px;
+}
+
+#new-game-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: var(--red);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#new-game-button:hover {
+  background-color: #cc0000;
+  color: white;
+}
+
+#result-text {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: var(--red);
+}
+
+/* === PONG === */
+#pong-game.container {
+  background-color: var(--black);
+  color: #ff2e2e;
+  border: 2px solid #ff2e2e;
+  padding: 20px;
+  max-width: 640px;
+  margin: 0 auto 40px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+#game-container {
+  margin-top: 10px;
+  border: 1px solid #ff2e2e;
+}
+
+#pong-canvas {
+  display: block;
+  background-color: transparent;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#game-instructions {
+  margin-top: 10px;
+  font-weight: 600;
+}
