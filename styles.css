@@ -6,27 +6,174 @@
   --light-gray: #ccc;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--black);
   color: var(--white);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  margin: 20px;
 }
 
-/* === COOKIE CLICKER === */
+/* Navigation */
+nav#navigation {
+  background-color: var(--red);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+#navLinks {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+#navLinks a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+#navLinks a:hover {
+  color: var(--black);
+}
+
+/* Header / Landing */
+header#home {
+  background-color: var(--gray);
+  text-align: center;
+  padding: 5rem 1rem;
+  border-bottom: 4px solid var(--red);
+}
+
+header#home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--red);
+}
+
+header#home h2 {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+/* About Section */
+#about {
+  padding: 4rem 2rem;
+  background-color: var(--black);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about h2 {
+  font-size: 2rem;
+  color: var(--red);
+  margin-bottom: 1rem;
+}
+
+#about p {
+  font-size: 1.1rem;
+  color: var(--light-gray);
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+/* Projects Section */
+#projects {
+  padding: 4rem 2rem;
+  background-color: var(--gray);
+}
+
+#projects h2 {
+  font-size: 2rem;
+  color: var(--red);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project {
+  background-color: var(--black);
+  padding: 2rem;
+  margin: 2rem auto;
+  border-left: 6px solid var(--red);
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.project p {
+  font-size: 1rem;
+  color: var(--light-gray);
+  margin-bottom: 1rem;
+}
+
+/* Footer / Contact */
+footer#contact {
+  background-color: var(--red);
+  padding: 2rem;
+  text-align: center;
+}
+
+footer#contact h2 {
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  margin: 0 1rem;
+  color: var(--white);
+  font-size: 1.8rem;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: var(--black);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #navLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .project {
+    padding: 1rem;
+  }
+}
+
+/* Cookie Clicker Styles */
 #cookieClickerPro {
   background-color: var(--black);
   color: var(--red);
   padding: 20px;
-  margin-bottom: 40px;
+  margin-top: 30px;
   border-radius: 10px;
   text-align: center;
-  max-width: 350px;
 }
 
 #cookieClickerPro .rank {
   font-weight: bold;
+  color: var(--red);
   margin-bottom: 10px;
 }
 
@@ -54,103 +201,15 @@ body {
   color: var(--white);
 }
 
-/* === HANGMAN === */
-#hangman-game {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  max-width: 600px;
-  margin-bottom: 40px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-}
-
-#hangman-game h1 {
-  color: var(--red);
-  margin-bottom: 20px;
-}
-
-#options-container {
-  margin: 20px auto;
-}
-
-.options {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #222;
-  border: 2px solid var(--red);
-  color: var(--red);
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.options:hover,
-.options.active {
-  background-color: var(--red);
-  color: black;
-}
-
-#user-input-section {
-  margin: 20px auto;
-  font-size: 2rem;
-  letter-spacing: 10px;
-  color: var(--red);
-}
-
-.dashes {
-  margin: 0 5px;
-  border-bottom: 2px solid var(--red);
-  display: inline-block;
-  width: 20px;
-  text-align: center;
-}
-
-#canvas {
-  margin-top: 30px;
-  background-color: #111;
-  border: 2px solid var(--red);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#new-game-container {
-  margin-top: 30px;
-}
-
-#new-game-button {
-  padding: 12px 24px;
-  font-size: 1rem;
-  background-color: var(--red);
-  color: black;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-#new-game-button:hover {
-  background-color: #cc0000;
-  color: white;
-}
-
-#result-text {
-  margin-top: 20px;
-  font-size: 1.5rem;
-  color: var(--red);
-}
-
-/* === PONG === */
+/* Pong Game */
 #pong-game.container {
   background-color: var(--black);
   color: #ff2e2e;
   border: 2px solid #ff2e2e;
   padding: 20px;
-  max-width: 640px;
-  margin: 0 auto 40px;
+  width: 640px;
+  margin: auto;
   font-family: 'Poppins', sans-serif;
-  text-align: center;
 }
 
 #game-container {
@@ -163,10 +222,129 @@ body {
   background-color: transparent;
   width: 600px;
   height: 400px;
-  margin: 0 auto;
 }
 
 #game-instructions {
   margin-top: 10px;
+  text-align: center;
   font-weight: 600;
 }
+
+#hangman-game {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text for readability */
+  padding: 20px;
+  text-align: center;
+}
+
+#hangman-game h1,
+#hangman-game h3 {
+  margin-top: 20px;
+  color: red;
+}
+
+#hangman-game #options-container {
+  margin: 20px auto;
+}
+
+#hangman-game .options {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #222;
+  border: 2px solid red;
+  color: red;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#hangman-game .options:hover,
+#hangman-game .options.active {
+  background-color: red;
+  color: black;
+}
+
+#hangman-game #letter-container {
+  margin-top: 20px;
+}
+
+#hangman-game #letter-container button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: black;
+  border: 2px solid red;
+  color: red;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#hangman-game #letter-container button:hover {
+  background-color: red;
+  color: black;
+}
+
+#hangman-game #user-input-section {
+  margin: 20px auto;
+  font-size: 2rem;
+  letter-spacing: 10px;
+  color: red;
+}
+
+#hangman-game .dashes {
+  margin: 0 5px;
+  border-bottom: 2px solid red;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+#hangman-game #canvas {
+  margin-top: 30px;
+  background-color: #111;
+  border: 2px solid red;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hangman-game #new-game-container {
+  margin-top: 30px;
+}
+
+#hangman-game .hide {
+  display: none;
+}
+
+#hangman-game #new-game-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: red;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#hangman-game #new-game-button:hover {
+  background-color: #cc0000;
+  color: white;
+}
+
+#hangman-game .win-msg {
+  color: red;
+}
+
+#hangman-game .lose-msg {
+  color: red;
+}
+
+#hangman-game #result-text {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: red;
+}
+
