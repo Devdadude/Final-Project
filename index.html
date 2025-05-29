@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="index.css">
-      <title>Page Title</title>
-  </head>
-  <body>
-    <h1>Calc APP</h1>
-    <script src="calc.js">
-    
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Games Collection</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- COOKIE CLICKER -->
+  <div id="cookieClickerPro">
+    <div class="rank">Rank: Beginner</div>
+    <img src="cookie.png" alt="Cookie" class="cookie" id="cookie" />
+    <div>Clicks: <span id="score">0</span></div>
+    <button class="button" id="upgradeBtn">Buy Upgrade (+1 per click)</button>
+  </div>
+
+  <!-- HANGMAN -->
+  <div id="hangman-game">
+    <h1>Hangman</h1>
+    <div id="options-container"></div>
+    <div id="user-input-section"></div>
+    <div id="result-text"></div>
+    <canvas id="canvas" width="400" height="300"></canvas>
+    <div id="new-game-container">
+      <button id="new-game-button">New Game</button>
+    </div>
+  </div>
+
+  <!-- PONG -->
+  <div id="pong-game" class="container">
+    <h1>Pong Game</h1>
+    <div id="game-container">
+      <canvas id="pong-canvas" width="600" height="400"></canvas>
+      <div id="game-instructions">
+        Player 1: W/S keys | Player 2: Up/Down arrow keys
+      </div>
+    </div>
+  </div>
+
+  <!-- Separate JS files below -->
+  <script src="cookie-clicker.js"></script>
+  <script src="hangman.js"></script>
+  <script src="pong.js"></script>
 </body>
 </html>
