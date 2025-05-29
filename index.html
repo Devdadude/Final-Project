@@ -42,61 +42,53 @@
     <section id="projects">
   <h2>My Projects</h2>
 
-  <!-- Project 1: Cookie Clicker -->
-  <div class="project">
-    <h3>Cookie Clicker</h3>
-    <p>
-      A simple cookie clicker game made from scratch. In this game, you just click the cookie to get your score up. Once you have enough cookies, you can buy upgrades or even an auto clicker.
-    </p>
-    <div id="CookieClicker" class="projects">
-      <div class="cookie-container">
-        <div class="rank" id="rank">Rank: Novice</div>
-        <p>Cookies: <span id="score">0</span></p>
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/044/279/881/small/chocolate-chips-on-cookie-on-transparent-background-png.png" alt="cookie" class="cookie" id="cookie" />
-        <br />
-        <button class="button" id="buyUpgradeBtn">Buy Upgrade (Cost: <span id="upgradeCost">15</span>)</button>
-        <button class="button" id="buyAutoClickerBtn">Buy Auto Clicker (Cost: <span id="autoCost">30</span>)</button>
-      </div>
-    </div>
-  </div> <!-- close project 1 -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Games Collection</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-  <!-- Project 2: Hangman -->
-  <div class="project">
-    <h3>Hangman</h3>
-    <p>
-      Another fun game where you can decide between 4 different topics. Try your luck and test your knowledge in this fun game!
-    </p>
-    <div id="hangman-game" class="container">
-      <div id="options-container"></div>
-      <div id="letter-container" class="letter-container hide"></div>
-      <div id="user-input-section"></div>
-      <canvas id="canvas" width="150" height="250"></canvas>
-      <div id="new-game-container" class="new-game-popup hide">
-        <div id="result-text"></div>
-        <button id="new-game-button">New Game</button>
-      </div>
-    </div>
-  </div> <!-- close project 2 -->
+  <!-- COOKIE CLICKER -->
+  <div id="cookieClickerPro">
+    <div class="rank">Rank: Beginner</div>
+    <img src="cookie.png" alt="Cookie" class="cookie" id="cookie" />
+    <div>Clicks: <span id="score">0</span></div>
+    <button class="button" id="upgradeBtn">Buy Upgrade (+1 per click)</button>
+  </div>
 
-  <!-- Project 3: Pong Game -->
-  <div class="project">
-    <h3>Pong Game</h3>
-    <p>
-      A throwback to the retro pong game! Another game where you go against AI in order to try and beat them in a game of pong.
-    </p>
-    <div id="pong-game" class="container">
-      <div id="game-header">
-        <h4>Pong Game</h4>
-      </div>
-      <div id="game-container">
-        <canvas id="pong-canvas" width="600" height="400"></canvas>
-      </div>
+  <!-- HANGMAN -->
+  <div id="hangman-game">
+    <h1>Hangman</h1>
+    <div id="options-container"></div>
+    <div id="user-input-section"></div>
+    <div id="result-text"></div>
+    <canvas id="canvas" width="400" height="300"></canvas>
+    <div id="new-game-container">
+      <button id="new-game-button">New Game</button>
+    </div>
+  </div>
+
+  <!-- PONG -->
+  <div id="pong-game" class="container">
+    <h1>Pong Game</h1>
+    <div id="game-container">
+      <canvas id="pong-canvas" width="600" height="400"></canvas>
       <div id="game-instructions">
-        <p>Control the left player by using the UP and DOWN arrow keys</p>
+        Player 1: W/S keys | Player 2: Up/Down arrow keys
       </div>
     </div>
-  </div> <!-- close project 3 -->
-</section>
+  </div>
+
+  <!-- Separate JS files below -->
+  <script src="cookie-clicker.js"></script>
+  <script src="hangman.js"></script>
+  <script src="pong.js"></script>
+</body>
+</html>
     </section>
 
     <!-- ===== Contact Section ===== -->
